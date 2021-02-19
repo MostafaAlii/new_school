@@ -19,7 +19,10 @@ return [
     'delete_selected_classes_checkbox'          =>                  'حذف الصفوف المحددة',
     'Processes'                                 =>                  'العمليات',
     'search_by_grade'                           =>                  'البحث عن طريق المرحلة الدراسية',
-
+    'class_number'                              =>                  'الرقم',
+    'class_name'                                =>                  'اسم الصف',
+    'class_grade_name'                          =>                  'اسم المرحلة',
     'class_name_required'                       =>                  'اسم الصف باللغة الحالية مطلوب',
     'other_class_name_lang_required'            =>                  'اسم الصف باللغة الاخرى مطلوب ايضا'
+
 ];
