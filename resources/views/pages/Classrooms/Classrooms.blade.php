@@ -68,9 +68,12 @@
                         </a>
                         <ul class="dropdown-menu" style="min-width:20.5rem;">
                             <li>
-                                <a href="" class="button cyan x-small center" style="width: 95%; margin-right: 8px; margin-bottom:5px;">
-                                    {{ trans('general.export_excel_file') }}
-                                </a>
+                                <form action="{{ route('export_excel') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="button cyan x-small center" style="width: 95%; margin-right: 8px; margin-bottom:5px;">
+                                        {{ trans('general.export_excel_file') }}
+                                    </button>
+                                </form>
                             </li>
                             <li>
                                 <a href="" class="button cyan x-small center" style="width: 95%; margin-right: 8px; margin-bottom:5px;">

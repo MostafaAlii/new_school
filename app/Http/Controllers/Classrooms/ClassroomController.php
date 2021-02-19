@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Interfaces\ClassroomsRepositoryInterface;
 use App\Http\Interfaces\GradesRepositoryInterface;
 use App\Http\Requests\ClassroomRequest;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ClassroomExport;
 use Illuminate\Http\Request;
 class ClassroomController extends Controller
 {
@@ -45,8 +47,8 @@ class ClassroomController extends Controller
         return view('pages.Classrooms.Classrooms',compact('Grades'))->withDetails($Search);
     }
 
-    public function excelExport(){
-        # code...
+    public function excelExport(Request $request){
+        return Excel::download(new ClassroomExport(), 'Classrooms-' .date('Y-m-d'). '.xlsx');
     }
 
 }
