@@ -1,0 +1,20 @@
+<?php
+return[
+    'main_dashboard'                            =>          'Dashboard',
+    'technoSoft_for_school_management'          =>          'TechnoSoft For School Management',
+    'school_grade'                              =>          'School Grades',
+    'school_grade_list'                         =>          'Grade List',
+    'school_classes'                            =>          'Classes',
+    'change_language'                           =>          'Change Languages',
+    'sections'                                  =>          'Sections',
+    'students'                                  =>          'Students',
+    'Teachers'                                  =>          'Teachers',
+    'Parents'                                   =>          'Parents',
+    'Accounts'                                  =>          'Accounts',
+    'Attendance'                                =>          'Attendance',
+    'Exams'                                     =>          'Exams',
+    'library'                                   =>          'library',
+    'Onlineclasses'                             =>          'Online Classes',
+    'Settings'                                  =>          'Settings',
+    'Users'                                     =>          'Users',
+];
