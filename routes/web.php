@@ -30,6 +30,8 @@ Route::group(
             Route::resource('Classrooms', 'ClassroomController');
             Route::post('Classrooms/Filter', 'ClassroomController@classesFilter')->name('classes_filter');
             Route::post('Excel/Export', 'ClassroomController@excelExport')->name('export_excel');
+            Route::get('Excel/Import', 'ClassroomController@excelUpload');
+            Route::post('Excel/Import', 'ClassroomController@excelImport')->name('import_excel');
             Route::post('Delete/All', 'ClassroomController@destroyAll')->name('delete_all');
         });
 

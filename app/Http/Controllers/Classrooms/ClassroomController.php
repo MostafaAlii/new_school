@@ -51,6 +51,13 @@ class ClassroomController extends Controller
         return Excel::download(new ClassroomExport(), 'Classrooms-' .date('Y-m-d'). '.xlsx');
     }
 
+    public function excelUpload(Request $request){
+        # code...
+    }
+
+    public function excelImport(ClassroomRequest $request){
+        # code...
+    }
 }
 
 ?>

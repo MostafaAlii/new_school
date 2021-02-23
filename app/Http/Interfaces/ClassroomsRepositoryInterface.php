@@ -9,5 +9,6 @@ interface ClassroomsRepositoryInterface
     public function DeleteClass(Request $request);
     public function DeleteAllClasses(Request $request);
     public function Classes_Filter(Request $request);
-    
+    public function Excel_Upload(Request $request);
+    public function Excel_Import(Request $request);
 }
