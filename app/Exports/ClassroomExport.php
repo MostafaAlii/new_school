@@ -28,7 +28,7 @@ class ClassroomExport implements FromCollection, WithMapping, WithHeadings
         return [
             trans('classes.class_name'),
             trans('classes.class_grade_name'),
-            'Date',
+            trans('classes.Date'),
         ];
     }
 }

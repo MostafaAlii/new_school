@@ -23,6 +23,7 @@ return [
     'class_name'                                =>                  'اسم الصف',
     'class_grade_name'                          =>                  'اسم المرحلة',
     'class_name_required'                       =>                  'اسم الصف باللغة الحالية مطلوب',
-    'other_class_name_lang_required'            =>                  'اسم الصف باللغة الاخرى مطلوب ايضا'
-
+    'other_class_name_lang_required'            =>                  'اسم الصف باللغة الاخرى مطلوب ايضا',
+    'Date'                                      =>                  'التاريخ',
+    'add_new_excel_file'                        =>                  'اضافة ملف اكسيل',
 ];

@@ -7,6 +7,7 @@ return[
     'Close'                     =>              'اغلاق',
     'submit'                    =>              'حفظ البيانات',
     'update'                    =>              'تحديث',
+    'import'                    =>              'ارفاق',
     'Notes'                     =>              'ملاحظات',
     'warning_delete'            =>              'هل انت متاكد من عمليه الحذف ؟',
     'export_excel_file'         =>              'تصدير كملف اكسيل',
