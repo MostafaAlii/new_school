@@ -25,12 +25,17 @@ Route::group(
             Route::resource('Grades', 'GradeController');
         });
 
-        // Classes Route Resources
+        // Classrooms Route Resources
         Route::group(['namespace' => 'Classrooms'], function () {
             Route::resource('Classrooms', 'ClassroomController');
             Route::post('Classrooms/Filter', 'ClassroomController@classesFilter')->name('classes_filter');
             Route::post('Excel/Export', 'ClassroomController@excelExport')->name('export_excel');
             Route::post('Delete/All', 'ClassroomController@destroyAll')->name('delete_all');
+        });
+
+        // Sections Route Resources
+        Route::group(['namespace' => 'Sections'], function () {
+            Route::resource('Sections', 'SectionController');
         });
 
     }

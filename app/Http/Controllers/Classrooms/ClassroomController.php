@@ -6,7 +6,6 @@ use App\Http\Interfaces\GradesRepositoryInterface;
 use App\Http\Requests\ClassroomRequest;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ClassroomExport;
-use App\Imports\ClassroomsImport;
 use Illuminate\Http\Request;
 class ClassroomController extends Controller
 {
