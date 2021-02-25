@@ -20,6 +20,8 @@ return[
     'error_store_message'       =>              'يوجد خطا فى البيانات برجاء المحاولة مره اخرى',
     'error_update_message'      =>              'يوجد خطا فى تحديث البيانات برجاء المحاولة مره اخرى',
     'error_you_have_child_classes'      =>      'لا يمكن حذف المرحلة لوجود صفوف تابعه لها',
+    'attachment_required'       =>              'الملف المرفق مطلوب',
+    'attachment_mimes'          =>              'الملف المرفق يجب ان يكون من نوع اكسيل',
     // Copyright
     'Copyright'                 =>              'جميع الحقوق محفوظة ',
     'Name_Programer'            =>              'مصطفى على تكنو سوفت'

@@ -84,12 +84,4 @@ class ClassroomsRepository implements ClassroomsRepositoryInterface
     public function Classes_Filter(Request $request){
         return $this->Classroom->select('*')->where('Grade_id','=',$request->Grade_id)->get();
     }
-
-    public function Excel_Upload(Request $request){
-        
-    }
-
-    public function Excel_Import(Request $request){
-
-    }
 }
