@@ -22,6 +22,7 @@ class ClassroomRequest extends FormRequest
         return [
             'List_Classes.*.Name'                  =>  'required',
             'List_Classes.*.Name_class_en'         =>  'required',
+            'attachment'                           =>  'required|mimes:xlsx,xls',
         ];
     }
 
@@ -30,6 +31,8 @@ class ClassroomRequest extends FormRequest
         return [
             'List_Classes.*.Name.required'                      =>             trans('classes.class_name_required'),
             'List_Classes.*.Name_class_en.required'             =>             trans('classes.other_class_name_lang_required'),
+            'attachment.requried'                               =>              trans('general.attachment_required'),
+            'attachment.mimes'                                  =>              trans('general.attachment_mimes'),
         ];
     }
 }

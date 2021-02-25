@@ -74,11 +74,6 @@
                                     </button>
                                 </form>
                             </li>
-                            <li>
-                                <button href="" class="button cyan x-small center" style="width: 95%; margin-right: 8px; margin-bottom:5px;" data-toggle="modal" data-target="#importExcelModal">
-                                    {{ trans('general.import_excel_file') }}
-                                </button>
-                            </li>
                             <li class="divider"></li>
                         </ul>
                     </li>
@@ -256,45 +251,6 @@
         <!-- End card card-statistics h-100 -->
     </div>
     <!-- End col-xl-12 mb-30 -->
-    <!-- Start importExcelModal -->
-    <div class="modal fade" id="importExcelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title" id="exampleModalLabel">
-                        <i class="fa fa-plus" aria-hidden="true"> </i>
-                        {{ trans('classes.add_new_excel_file') }}
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form class=" row mb-30" action="{{ route('import_excel') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="card-body">
-                            <div class="input-group input-group-sm mb-3">
-                                <div class="custom-file">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                    <input type="file"name="attachment" class="custom-file-input" id="inputGroupFile01">
-                                </div>
-                            </div>
-                                <!--<div class="form-group center">
-                                    <label for="attachment"></label>
-                                    <input type="file" name="attachment" class="custom-file">
-                                </div>-->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ trans('general.Close') }}</button>
-                                <button type="submit" class="btn btn-success">{{ trans('general.import') }}</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End importExcelModal -->
     <!-- Start Add New Class Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
