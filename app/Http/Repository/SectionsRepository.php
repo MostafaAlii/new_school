@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Repository;
 use App\Http\Interfaces\SectionsRepositoryInterface;
+use App\Models\Classroom;
+use App\Models\Grade;
 use App\Models\Section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,7 +13,7 @@ class SectionsRepository implements SectionsRepositoryInterface
         $this->Section = $Section;
     }
 
-    public function GetAllSections(){
-        return $this->Section->all();
+    public function GetSectionsWithGrades(){
+        return Grade::with(['Sections'])->get();;
     }
 }
