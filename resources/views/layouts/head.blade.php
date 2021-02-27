@@ -12,6 +12,7 @@
 <!--- Style css -->
 <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('assets/css/plugins/select2.min.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('assets/css/plugins/switchery.min.css') }}" rel="stylesheet">
 
 <!--- Style css -->
 @if (App::getLocale() == 'en')

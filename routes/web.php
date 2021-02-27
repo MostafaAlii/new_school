@@ -36,6 +36,7 @@ Route::group(
         // Sections Route Resources
         Route::group(['namespace' => 'Sections'], function () {
             Route::resource('Sections', 'SectionController');
+            Route::get('/classes/{id}', 'SectionController@getclasses');
         });
 
     }

@@ -10,8 +10,7 @@ class Section extends Model
     protected $table = 'sections';
     public $timestamps = true;
     
-    public function My_classs()
-    {
+    public function My_classs(){
         return $this->belongsTo('App\Models\Classroom', 'Class_id');
     }
 }
