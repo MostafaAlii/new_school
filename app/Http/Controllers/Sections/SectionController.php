@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Interfaces\SectionsRepositoryInterface;
 use App\Http\Interfaces\GradesRepositoryInterface;
 use App\Http\Requests\SectionsRequest;
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 class SectionController extends Controller{
     protected $SectionsInterface, $GradesInterface;
     public function __construct(SectionsRepositoryInterface $SectionsInterface, GradesRepositoryInterface $GradesInterface){
@@ -25,6 +25,11 @@ class SectionController extends Controller{
 
     public function update(SectionsRequest $request){
         $UpdateSection = $this->SectionsInterface->UpdateSectionInfo($request);
+        return redirect()->route('Sections.index');
+    }
+
+    public function destroy(Request $request){
+        $DestroySection = $this->SectionsInterface->DeleteSection($request);
         return redirect()->route('Sections.index');
     }
 

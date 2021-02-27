@@ -66,4 +66,18 @@ class SectionsRepository implements SectionsRepositoryInterface
             return redirect()->back()->withErrors(['error' => $ex->getMessage()]);
         }
     }
+
+    public function DeleteSection(Request $request){
+        $Sections = $this->Section->findOrFail($request->id);
+        try {
+            DB::beginTransaction();
+            $Sections->delete();
+            DB::commit();
+            toastr()->warning(trans('sections.success_delete_message'));
+        }catch (\Exception $ex){
+            DB::rollback();
+            toastr()->error(trans('general.error_store_message'));
+            return redirect()->back()->withErrors(['error' => $ex->getMessage()]);
+        }
+    }
 }

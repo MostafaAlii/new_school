@@ -15,6 +15,7 @@ return [
     'edit_Section'                      =>                      'تعديل قسم',
     'delete_Section'                    =>                      'حذف قسم',
     'Warning_Section'                   =>                      'هل انت متاكد من عملية الحذف',
+    'success_delete_message'            =>                      'تم حذف بيانات القسم بنجاح',
     
     'Notes' => 'Notes',
     'submit' => 'حفظ البيانات',
