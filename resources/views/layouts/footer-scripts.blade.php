@@ -4,6 +4,8 @@
 <script src="{{ URL::asset('assets/js/plugins-jquery.js') }}"></script>
 <!-- Select2 Plugin -->
 <script src="{{ URL::asset('assets/js/select2.min.js') }}"></script>
+<!-- Switchery Plugin -->
+<script src="{{ URL::asset('assets/js/switchery.min.js') }}"></script>
 <!-- plugin_path -->
 <script type="text/javascript">var plugin_path = '{{ asset('assets/js') }}/';</script>
 <!-- chart -->
@@ -62,6 +64,27 @@
         dir: "rtl",
         width: "20%",
         theme: "classic",
+    });
+
+    // Switchery Toggle Btn
+    var elem = document.querySelector('.switchery');
+    var init = new Switchery(elem);
+    defaults = {
+        color             : '#64bd63',
+        secondaryColor    : '#dfdfdf',
+        jackColor         : '#fff',
+        jackSecondaryColor: null,
+        className         : 'switchery',
+        disabled          : false,
+        disabledOpacity   : 0.5,
+        speed             : '0.1s',
+        size              : 'default',
+    }
+
+    $(document).ready(function() {
+        $('.select2dropdown-menu').select2({
+            dir: "rtl",
+        });
     });
 });
 </script>
