@@ -6,4 +6,5 @@ interface SectionsRepositoryInterface{
     public function GetClassroomsByGrade($id);
     public function StoreNewSection(Request $request);
     public function UpdateSectionInfo(Request $request);
+    public function DeleteSection(Request $request);
 }

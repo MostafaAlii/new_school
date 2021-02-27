@@ -268,7 +268,7 @@
                                                                                                     class="btn btn-secondary"
                                                                                                     data-dismiss="modal">{{ trans('general.Close') }}</button>
                                                                                             <button type="submit"
-                                                                                                    class="btn btn-success">{{ trans('general.submit') }}</button>
+                                                                                                    class="btn btn-danger">{{ trans('general.Delete') }}</button>
                                                                                         </div>
                                                                                     </form>
                                                                                 </div>
