@@ -17,7 +17,8 @@ return [
     'Edit'=>'Edit',
     'Delete'=>'Delete',
     'Close' => 'Close',
-
+    'delete_selected_classes_checkbox'  =>  'Multi Delete',
+    'search_by_grade'                   =>  'Search By Grade',
 
 
 ];
