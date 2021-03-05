@@ -11,6 +11,7 @@ return[
     'required'                  =>              'This Field Is Required',
     'success_store_message'     =>              'Data has been saved successfully!',
     'error_store_message'       =>              'An error has occurred please try again later.',
+    'import_and_export_operations'=>            'Import And Export',
     // Copyright
     'Copyright'                 =>              'All Right Reserved',
     'Name_Programer'            =>              'Mostafa Ali TechnoSoft'

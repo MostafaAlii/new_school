@@ -112,8 +112,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Parents-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="calendar.html">Events Calendar </a> </li>
-                            <li> <a href="calendar-list.html">List Calendar</a> </li>
+                            <li> <a href="{{ url('Add/Parent') }}">{{ trans('parents.add_parents') }}</a> </li>
+                            <li> <a href="#">{{ trans('parents.show_all_parents_list') }}</a> </li>
                         </ul>
                     </li>
                     <!-- Accounts-->
