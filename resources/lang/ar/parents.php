@@ -59,6 +59,7 @@ return [
     'Passport_ID_Mother' => 'رقم جواز السفر',
     'Phone_Mother' => 'رقم الهاتف',
     'Address_Mother' => 'عنوان الام',
+    'Attachments'   => 'المرفقات',
 
     'Next' => 'التالي',
     'Back' => 'السابق',
