@@ -28,7 +28,7 @@ class AddParent extends Component
             $Phone_Mother, $Job_Mother, $Job_Mother_en,
             $Nationality_Mother_id, $Blood_Type_Mother_id,
             $Address_Mother, $Religion_Mother_id;
-
+    
     public function updated($propertyName) {
         $this->validateOnly($propertyName, [
             'Email' => 'required|email',
@@ -48,6 +48,7 @@ class AddParent extends Component
                     'Religions' => Religion::all(),
         ]);
     }
+    
 
     //firstStepSubmit
     public function firstStepSubmit() {
@@ -66,6 +67,7 @@ class AddParent extends Component
             'Religion_Father_id' => 'required',
             'Address_Father' => 'required',
         ]);
+        return $this->ParentsInterface->FirstStepSubmitValidation();
         $this->currentStep = 2;
     }
 
