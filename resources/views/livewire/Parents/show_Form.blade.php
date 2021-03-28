@@ -10,13 +10,12 @@
 <div class="page-title">
     <div class="row">
         <div class="col-sm-6">
-            <h4 class="mb-0">{{ trans('parents.add_parents') }}</h4>
+            <h4 class="mb-0">{{ trans('parents.parents') }}</h4>
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard.home') }}" class="default-color">{{{ trans('main_sidebar.main_dashboard') }}}</a></li>
                 <li class="breadcrumb-item">{{ trans('parents.show_all_parents_list') }}</li>
-                <li class="breadcrumb-item active">{{ trans('parents.add_parents') }}</li>
             </ol>
         </div>
     </div>

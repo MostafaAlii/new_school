@@ -40,7 +40,7 @@ Route::group(
         });
 
         // Livewire Parents Route
-         Route::view('Add/Parent','livewire.Parents.show_Form');
+         Route::view('Parents','livewire.Parents.show_Form');
 
     }
 );
