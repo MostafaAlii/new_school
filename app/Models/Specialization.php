@@ -2,8 +2,11 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
-class Teacher extends Model {
+class Specialization extends Model
+{
     use HasTranslations;
-    protected $table = 'teachers';
+    protected $table = 'specializations';
+    public $translatable = ['Name'];
+    protected $fillable = ['Name'];
     public $timestamps = true;
 }

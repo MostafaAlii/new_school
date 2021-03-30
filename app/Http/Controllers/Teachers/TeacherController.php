@@ -9,4 +9,9 @@ class TeacherController extends Controller{
     public function __construct(TeachersRepositoryInterface $TeachersInterface){
         $this->TeachersInterface = $TeachersInterface;
     }
+
+    public function index(){
+        $Teachers = $this->TeachersInterface->GetAllTeachers();
+        //return view('pages.Grades.Grades', compact('Teachers'));
+    }
 }
