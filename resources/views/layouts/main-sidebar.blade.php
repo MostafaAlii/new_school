@@ -36,9 +36,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Settings-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="#">{{ trans('settings.translation_control') }}</a> </li>
+                            <li> <a href="#">{{ trans('settings.application_workflow') }}</a> </li>
                         </ul>
                     </li>
                     <!-- menu item Elements-->

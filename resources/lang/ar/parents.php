@@ -4,6 +4,7 @@ return [
     'parents'                               =>                         'اولياء اﻻمور',
     'show_all_parents_list'                 =>                         'قائمة اولياء اﻻمور',
     'all_parents_pageTitle'                 =>                         'قائمة اولياء اﻻمور',
+    'success_delete_message'                =>                         'تم حذف بيانات ولى الامر بنجاح',
     /*'father_info'                           =>                         'معلومات اﻻب',
     'mother_info'                           =>                         'معلومات اﻻم',
     'phone_number'                          =>                          'رقم الهاتف',
@@ -20,14 +21,14 @@ return [
     'choose_from_list'                      =>                          'اختر من القائمة',
     'Choose'                                =>                          'اختر',
     'next'                                  =>                          'التالى',
-    
+
     'nationality'                           =>                          'الجنسية',
     'address_father'                        =>                          'عنوان الاب',
     'address_mother'                        =>                          'عنوان الام',
     'email'                                 =>                          'البريد الالكترونى',
     'password'                              =>                          'كلمة المرور',
     'information_confirm'                   =>                          'تاكيد',
-    
+
     'confirm'                               =>                          'تاكيد',
     'step1'                                 =>                          '١',
     'step2'                                 =>                          '٢',

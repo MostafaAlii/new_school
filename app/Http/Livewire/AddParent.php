@@ -198,7 +198,6 @@ class AddParent extends Component
             ]);
         }
         return redirect()->to('/Parents');
-
     }
 
     // Delete

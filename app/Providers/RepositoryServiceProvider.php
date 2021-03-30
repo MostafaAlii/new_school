@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Providers;
-
 use Illuminate\Support\ServiceProvider;
-
 class RepositoryServiceProvider extends ServiceProvider
 {
     /**
@@ -29,6 +26,12 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Http\Interfaces\SectionsRepositoryInterface',
             'App\Http\Repository\SectionsRepository'
+        );
+
+        // Teachers Repository
+        $this->app->bind(
+            'App\Http\Interfaces\TeachersRepositoryInterface',
+            'App\Http\Repository\TeachersRepository'
         );
     }
 
