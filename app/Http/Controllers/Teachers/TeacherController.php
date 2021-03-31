@@ -12,6 +12,32 @@ class TeacherController extends Controller{
 
     public function index(){
         $Teachers = $this->TeachersInterface->GetAllTeachers();
-        //return view('pages.Grades.Grades', compact('Teachers'));
+        return view('pages.Teachers.Teachers', compact('Teachers'));
+    }
+
+    public function create() {
+        $specializations = $this->TeachersInterface->GetAllSpecializations();
+        $genders         = $this->TeachersInterface->GetAllGenders();
+        return view('pages.Teachers.create', compact('specializations', 'genders'));
+    }
+
+    public function store(TeachersRequest $request) {
+        //
+    }
+
+    public function show($id) {
+        //
+    }
+
+    public function edit($id) {
+        //
+    }
+
+    public function update(TeachersRequest $request, $id) {
+        //
+    }
+
+    public function destroy($id) {
+        //
     }
 }

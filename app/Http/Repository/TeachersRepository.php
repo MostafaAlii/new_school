@@ -24,4 +24,22 @@ class TeachersRepository implements TeachersRepositoryInterface {
     public function GetAllGenders(){
         return $this->Gender->all();
     }
+
+    public function TeacherStore(){
+        try {
+            DB::beginTransaction();
+
+            DB::commit();
+            toastr()->success(trans('general.success_store_message'));
+        } catch (\Exception $e){
+            DB::rollBack();
+            toastr()->error(trans('general.error_store_message'));
+            return redirect()->back()->withErrors(['error' => $ex->getMessage()]);
+        }
+    }
+    public function TeacherUpdate(){}
+    public function TeacherDelete(){}
+    public function TeacherMultiDelete(){}
+
+    public function TeacherExcelExport(){}
 }

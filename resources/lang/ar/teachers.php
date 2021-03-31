@@ -3,6 +3,7 @@ return [
     'Teachers_List'                         =>                              'قائمة المعلمين',
     'Name_Teacher'                          =>                              'اسم المعلم',
     'Add_Teacher'                           =>                              'اضافة معلم',
+    'Add_New_Teacher'                       =>                              'اضافة معلم جديد',
     'Edit_Teacher'                          =>                              'تعديل معلم',
     'Delete_Teacher'                        =>                              'حذف معلم',
     'Email'                                 =>                              'البريد الالكتروني',
