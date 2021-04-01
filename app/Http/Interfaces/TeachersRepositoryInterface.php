@@ -7,7 +7,7 @@ interface TeachersRepositoryInterface {
     public function GetAllSpecializations();
     public function GetAllGenders();
     // CRUD Operation ::
-    public function TeacherStore();
+    public function TeacherStore(Request $request);
     public function TeacherUpdate();
     public function TeacherDelete();
     public function TeacherMultiDelete();

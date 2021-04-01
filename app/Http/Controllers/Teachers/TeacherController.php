@@ -22,7 +22,8 @@ class TeacherController extends Controller{
     }
 
     public function store(TeachersRequest $request) {
-        //
+        $StoreNewTeacher = $this->TeachersInterface->TeacherStore($request);
+        return redirect()->route('Teachers.index');
     }
 
     public function show($id) {
