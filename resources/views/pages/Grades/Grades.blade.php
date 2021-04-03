@@ -2,7 +2,7 @@
 @section('css')
 @toastr_css
 @section('title')
-    {{ trans('main_sidebar.school_grade') }}
+    {{ trans('general.technoSoft') }} | {{ trans('main_sidebar.school_grade') }}
 @stop
 @endsection
 @section('page-header')

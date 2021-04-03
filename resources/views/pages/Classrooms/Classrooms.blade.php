@@ -2,7 +2,7 @@
 @section('css')
 @toastr_css
 @section('title')
-    {{ trans('classes.title_page') }}
+    {{ trans('general.technoSoft') }} | {{ trans('classes.title_page') }}
 @stop
 @endsection
 @section('page-header')

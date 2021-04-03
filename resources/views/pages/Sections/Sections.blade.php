@@ -2,7 +2,7 @@
 @section('css')
 @toastr_css
 @section('title')
-    {{ trans('sections.sections') }}
+    {{ trans('general.technoSoft') }} | {{ trans('sections.sections') }}
 @stop
 @endsection
 @section('page-header')
@@ -350,6 +350,16 @@
                                             </label>
                                             <select name="Class_id" class="custom-select">
                                                 
+                                            </select>
+                                        </div>
+                                        <br>
+
+                                        <div class="col">
+                                            <label for="inputName" class="control-label">{{ trans('teachers.Name_Teacher') }}</label>
+                                            <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                                @foreach($Teachers_List as $Teacher_List)
+                                                    <option value="{{$Teacher_List->id}}">{{$Teacher_List->Name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
 

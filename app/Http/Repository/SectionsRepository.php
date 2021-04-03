@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class SectionsRepository implements SectionsRepositoryInterface
 {
-    protected $Section;
+    protected $Section, $Teacher;
     public function __construct(Section $Section) {
         $this->Section = $Section;
     }
@@ -31,6 +31,7 @@ class SectionsRepository implements SectionsRepositoryInterface
             $Sections->Class_id = $request->Class_id;
             $Sections->Status = 1;
             $Sections->save();
+            $Sections->teachers()->attach($request->teacher_id);
             DB::commit();
             toastr()->success(trans('general.success_store_message'));
         } catch(\Exception $ex){
