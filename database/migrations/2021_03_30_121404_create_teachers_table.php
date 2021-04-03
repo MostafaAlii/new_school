@@ -15,6 +15,8 @@ class CreateTeachersTable extends Migration
             $table->id();
             $table->string('Email')->unique();
             $table->string('Password');
+            $table->string('Photo')->default('default.png');
+            $table->smallInteger('Mobile')->nullable()->unsigned();
             $table->string('Name');
             $table->bigInteger('Specialization_id')->unsigned();
             $table->foreign('Specialization_id')->references('id')->on('specializations')->onDelete('cascade');

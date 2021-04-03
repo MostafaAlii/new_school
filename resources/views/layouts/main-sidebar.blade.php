@@ -36,6 +36,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Settings-icon" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="#">{{ trans('settings.application_setting') }}</a> </li>
                             <li> <a href="#">{{ trans('settings.translation_control') }}</a> </li>
                             <li> <a href="#">{{ trans('settings.application_workflow') }}</a> </li>
                         </ul>

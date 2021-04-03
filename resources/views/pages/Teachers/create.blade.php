@@ -42,9 +42,23 @@
                     @endif
                     <div class="col-xs-12">
                         <div class="col-md-12">
-                            <br>
-                            <form action="{{route('Teachers.store')}}" method="post">
+                            <br><br>
+                            <form action="{{route('Teachers.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="file" class="input-file">
+                                            <i class="fa fa-camera-retro la-lg la-fw"> </i>
+                                            <span id="photo_label_span">{{trans('general.Photo_Attachment')}}</span>
+                                        </label>
+                                        <input type="file" id="file" name="file" onchange="previewPhotoFile(this)">
+                                        <img id="previewImg" class="rounded-circle pull-left" style="max-width: 250px; margin-left: 150px;">
+                                        @error('photo')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <br>
                                 <div class="form-row">
                                     <div class="col">
                                         <label for="title">{{trans('teachers.Email')}}</label>
@@ -81,6 +95,18 @@
                                     </div>
                                 </div>
                                 <br>
+
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <label for="title">{{trans('teachers.Mobile_Number')}}</label>
+                                        <input type="number" name="Mobile" class="form-control">
+                                        @error('Mobile')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <br>
+
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <label for="inputCity">{{trans('teachers.specialization')}}</label>
@@ -145,4 +171,27 @@
 @section('js')
     @toastr_js
     @toastr_render
+    <script>
+        $(document).ready(function (){
+            $("#file").on("change", function(e){
+            var file = $(this)[0].files, filename = e.target.value.split('\\').pop();
+            if(file.length == 1){
+                $(".input-file").find(".fa-camera-retro").toggleClass("fa-upload");
+                $("#photo_label_span").text(filename + "  " + '{{ trans("general.photo_is_ready") }}');
+            } else{
+                alert('{{ __("general.please_upload_one_photo_only") }}');
+            }
+            });
+        });
+        function previewPhotoFile(input) {
+            var file = $("input[type=file]").get(0).files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function () {
+                    $("#previewImg").attr("src",reader.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 @endsection

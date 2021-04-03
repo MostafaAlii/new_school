@@ -8,7 +8,6 @@ class Teacher extends Model {
     public $translatable = ['Name'];
     protected $guarded = [];
     public $timestamps = true;
-
     // علاقة بين المعلمين والتخصصات لجلب اسم التخصص
     public function specializations()
     {

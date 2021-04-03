@@ -98,7 +98,26 @@ main,
 nav,
 section {
   display: block; }
-
+/* Input File Upload */
+.form-row .col label.input-file {
+    background: #84ba3f;
+    color: #fff;
+    padding: 15px 30px;
+    transition: 0.5s;
+}
+.form-row .col label i.fa-upload,
+.form-row .col label i.fa-camera-retro{
+    margin-left: 10px;
+}
+.form-row .col label.input-file:hover,
+.form-row .col label.input-file:focus,
+.form-row .col label.input-file:active{
+    background: #343a40;
+    cursor: pointer;
+}
+#file {
+    display: none;
+}
 body {
   margin: 0;
   font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

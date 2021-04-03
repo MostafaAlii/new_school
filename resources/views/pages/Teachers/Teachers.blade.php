@@ -46,6 +46,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>{{ trans('teachers.Name_Teacher') }}</th>
+                                            <th>{{ trans('teachers.Photo_Teacher') }}</th>
                                             <th>{{ trans('teachers.Gender') }}</th>
                                             <th>{{ trans('teachers.Joining_Date') }}</th>
                                             <th>{{ trans('teachers.specialization') }}</th>
@@ -59,6 +60,9 @@
                                                 <?php $i++; ?>
                                                 <td>{{ $i }}</td>
                                                 <td>{{$Teacher->Name}}</td>
+                                                <td>
+                                                    <img class="rounded-circle" style="width: 100px; height: 80px;" src="{{ asset('uploads/teacher/avatar') }}/{{ $Teacher->Photo }}">
+                                                </td>
                                                 <td>{{$Teacher->genders->Name}}</td>
                                                 <td>{{$Teacher->Joining_Date}}</td>
                                                 <td>{{$Teacher->specializations->Name}}</td>

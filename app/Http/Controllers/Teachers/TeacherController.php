@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Teachers;
 use App\Http\Controllers\Controller;
 use App\Http\Interfaces\TeachersRepositoryInterface;
 use App\Http\Requests\TeachersRequest;
+use Intervention\Image\Image;
 use Illuminate\Http\Request;
 class TeacherController extends Controller{
     protected $TeachersInterface;

@@ -1,8 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-//Auth::routes();
-Auth::routes(['register' => false]);
+Auth::routes();
+//Auth::routes(['register' => false]);
 // Guest Member Non Authentication
 Route::group(['middleware' => 'guest'], function () {
 
@@ -19,6 +19,11 @@ Route::group(
         /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
         // Dashboard Home Controller
         Route::get('/dashboard', 'HomeController@index')->name('dashboard.home');
+
+        // Settings Route Resources
+        Route::group(['namespace' => 'Settings'], function () {
+            Route::resource('Settings', 'SettingController');
+        });
 
         // Grade Route Resources
         Route::group(['namespace' => 'Grades'], function () {

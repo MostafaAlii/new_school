@@ -14,6 +14,7 @@ class TeachersRepository implements TeachersRepositoryInterface {
         $this->Specialization = $Specialization;
         $this->Gender = $Gender;
     }
+
     public function GetAllTeachers(){
         return $this->Teacher->all();
     }
@@ -27,6 +28,20 @@ class TeachersRepository implements TeachersRepositoryInterface {
     }
 
     public function TeacherStore(Request $request){
+        //$request_data = $request->except('photo');
+        /*$photo    =  $request->photo;
+        $fileEx = $photo->getClientOriginalExtension();
+        $filename = date('Ymdhis.' . $fileEx);
+        $photo_resize = Image::make($photo->getRealPath());
+        $photo_resize->resize(300, null, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+        // add watermark
+        $photo_resize->insert(public_path('assets/watermark.png'), 'top-left', 10, 10);
+        //$photo->move(public_path('uploads/teacher/avatar/'), $filename);*/
+        $photo = $request->file('file');
+        $photoName = time(). '.'.$photo->extension();
+        $photo->move(public_path('uploads/teacher/avatar/'), $photoName);
         try {
             DB::beginTransaction();
             $Teachers = new Teacher();
@@ -36,7 +51,9 @@ class TeachersRepository implements TeachersRepositoryInterface {
             $Teachers->Specialization_id = $request->Specialization_id;
             $Teachers->Gender_id = $request->Gender_id;
             $Teachers->Joining_Date = $request->Joining_Date;
+            $Teachers->Mobile = $request->Mobile;
             $Teachers->Address = $request->Address;
+            $Teachers->photo = $photoName;
             $Teachers->save();
             DB::commit();
             toastr()->success(trans('general.success_store_message'));
