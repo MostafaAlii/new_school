@@ -16,5 +16,6 @@ return [
     'Address'                               =>                              'العنوان',
     'Photo_Teacher'                         =>                              'الصورة',
     'Mobile_Number'                         =>                              'رقم الهاتف',
-
+    'Edit_Teacher'                          =>                              'تعديل البيانات',
+    'Edit_Teacher_Information'              =>                              'تعديل بيانات المعلم',
 ];

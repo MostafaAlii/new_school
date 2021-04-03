@@ -8,7 +8,8 @@ interface TeachersRepositoryInterface {
     public function GetAllGenders();
     // CRUD Operation ::
     public function TeacherStore(Request $request);
-    public function TeacherUpdate();
+    public function TeacherEdit($id);
+    public function TeacherUpdate(Request $request);
     public function TeacherDelete();
     public function TeacherMultiDelete();
     // Export Operation ::

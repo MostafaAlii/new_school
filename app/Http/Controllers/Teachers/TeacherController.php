@@ -3,7 +3,6 @@ namespace App\Http\Controllers\Teachers;
 use App\Http\Controllers\Controller;
 use App\Http\Interfaces\TeachersRepositoryInterface;
 use App\Http\Requests\TeachersRequest;
-use Intervention\Image\Image;
 use Illuminate\Http\Request;
 class TeacherController extends Controller{
     protected $TeachersInterface;
@@ -32,11 +31,15 @@ class TeacherController extends Controller{
     }
 
     public function edit($id) {
-        //
+        $Teachers = $this->TeachersInterface->TeacherEdit($id);
+        $specializations = $this->TeachersInterface->GetAllSpecializations();
+        $genders         = $this->TeachersInterface->GetAllGenders();
+        return view('pages.Teachers.edit', compact('Teachers', 'specializations', 'genders'));
     }
 
-    public function update(TeachersRequest $request, $id) {
-        //
+    public function update(TeachersRequest $request) {
+        $UpdateTeacher =$this->TeachersInterface->TeacherUpdate($request);
+        return redirect()->route('Teachers.index');
     }
 
     public function destroy($id) {
