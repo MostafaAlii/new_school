@@ -42,7 +42,8 @@ class TeacherController extends Controller{
         return redirect()->route('Teachers.index');
     }
 
-    public function destroy($id) {
-        //
+    public function destroy(Request $request) {
+        $this->TeachersInterface->TeacherDelete($request);
+        return redirect()->route('Teachers.index');
     }
 }

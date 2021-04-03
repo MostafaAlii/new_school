@@ -85,7 +85,8 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <p> {{ trans('My_Classes_trans.Warning_Grade') }}</p>
+                                                                {{ trans('teachers.Warning_Teacher_Delete') }}
+                                                                <span class="text-danger font-bold">{{ $Teacher->getTranslation('Name', 'ar') }}</span>
                                                                 <input type="hidden" name="id"  value="{{$Teacher->id}}">
                                                             </div>
                                                             <div class="modal-footer">
@@ -93,7 +94,7 @@
                                                                     <button type="button" class="btn btn-secondary"
                                                                             data-dismiss="modal">{{ trans('general.Close') }}</button>
                                                                     <button type="submit"
-                                                                            class="btn btn-danger">{{ trans('general.submit') }}</button>
+                                                                            class="btn btn-danger">{{ trans('general.Delete') }}</button>
                                                                 </div>
                                                             </div>
                                                         </div>

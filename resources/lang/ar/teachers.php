@@ -18,4 +18,6 @@ return [
     'Mobile_Number'                         =>                              'رقم الهاتف',
     'Edit_Teacher'                          =>                              'تعديل البيانات',
     'Edit_Teacher_Information'              =>                              'تعديل بيانات المعلم',
+    'Warning_Teacher_Delete'                =>                              'هل متاكد من حذف المعلم ',
+    'success_delete_teacher_msg'            =>                              'تم حذف بيانات المعلم بنجاح',
 ];

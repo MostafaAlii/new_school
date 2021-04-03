@@ -84,7 +84,10 @@ class TeachersRepository implements TeachersRepositoryInterface {
         }
     }
 
-    public function TeacherDelete(){}
+    public function TeacherDelete(Request $request){
+        $this->Teacher->findOrFail($request->id)->delete();
+        toastr()->warning(trans('teachers.success_delete_teacher_msg'));
+    }
 
     public function TeacherMultiDelete(){}
 

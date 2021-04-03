@@ -10,7 +10,7 @@ interface TeachersRepositoryInterface {
     public function TeacherStore(Request $request);
     public function TeacherEdit($id);
     public function TeacherUpdate(Request $request);
-    public function TeacherDelete();
+    public function TeacherDelete(Request $request);
     public function TeacherMultiDelete();
     // Export Operation ::
     public function TeacherExcelExport();
