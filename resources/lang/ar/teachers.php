@@ -14,7 +14,7 @@ return [
     'Gender'                                =>                              'النوع',
     'Joining_Date'                          =>                              'تاريخ التعين',
     'Address'                               =>                              'العنوان',
-    'Photo_Teacher'                         =>                              'الصورة',
+    'Avatar_Teacher'                        =>                              'الصورة الشخصية',
     'Mobile_Number'                         =>                              'رقم الهاتف',
 
 ];

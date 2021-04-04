@@ -46,7 +46,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>{{ trans('teachers.Name_Teacher') }}</th>
-                                            <th>{{ trans('teachers.Photo_Teacher') }}</th>
+                                            <th>{{ trans('teachers.Avatar_Teacher') }}</th>
                                             <th>{{ trans('teachers.Gender') }}</th>
                                             <th>{{ trans('teachers.Joining_Date') }}</th>
                                             <th>{{ trans('teachers.specialization') }}</th>
