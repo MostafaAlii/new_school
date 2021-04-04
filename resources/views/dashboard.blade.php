@@ -26,7 +26,7 @@
  preloader -->
 
         @include('layouts.main-header')
-
+        {{--@include('layouts.main-settingBox')--}}
         @include('layouts.main-sidebar')
 
         <!--=================================

@@ -1,12 +1,7 @@
-/*$(document).ready(function (){
-    $("#file").on("change", function(){
-        var files = $(this)[0].files;
-        if(files.length == 1){
-            //$(".photoInputLabel").find(".la-camera-retro").toggleClass("la-upload");
-            $("#photo_label_span").text('{{ trans("general.photo_is_ready") }}');
-            alert("Changed");
-        } else{
-            alert("{{ __('general.please_upload_one_photo_only') }}");
-        }
+$(function () {
+    'use strict';
+    $(".toggle-settings").on("click", function(){
+        //$(this).find("i").toggleClass("fa-spin");
+        //$(this).parent().toggleClass("hide-setting-box");
     });
-});*/
+});

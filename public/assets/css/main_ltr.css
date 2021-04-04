@@ -1,0 +1,23 @@
+.wrapper.settings-box {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 225px;
+    height: 80%;
+    border-radius: 0 10px 10px 0;
+    background-color: #fff;
+    z-index: 5000;
+    padding: 20px;
+    transition: 0.3s;
+}
+.wrapper.settings-box.toggle-settings{
+    position: absolute;
+    left: -45px;
+    top: 40px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+.settings-box.hide-setting-box{right:-225px}
