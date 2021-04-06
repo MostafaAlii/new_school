@@ -3,19 +3,22 @@ namespace App\Http\Controllers\Sections;
 use App\Http\Controllers\Controller;
 use App\Http\Interfaces\SectionsRepositoryInterface;
 use App\Http\Interfaces\GradesRepositoryInterface;
+use App\Http\Interfaces\TeachersRepositoryInterface;
 use App\Http\Requests\SectionsRequest;
 use Illuminate\Http\Request;
 class SectionController extends Controller{
-    protected $SectionsInterface, $GradesInterface;
-    public function __construct(SectionsRepositoryInterface $SectionsInterface, GradesRepositoryInterface $GradesInterface){
+    protected $SectionsInterface, $GradesInterface, $TeachersInterface;
+    public function __construct(TeachersRepositoryInterface $TeachersInterface,SectionsRepositoryInterface $SectionsInterface, GradesRepositoryInterface $GradesInterface){
+        $this->TeachersInterface = $TeachersInterface;
         $this->SectionsInterface = $SectionsInterface;
         $this->GradesInterface   = $GradesInterface;
     }
 
     public function index(){
+        $teachers   =   $this->TeachersInterface->GetAllTeachers();
         $Grades = $this->SectionsInterface->GetSectionsWithGrades();
         $list_Grades = $this->GradesInterface->GetAllGrade();
-        return view('pages.Sections.Sections', compact('Grades', 'list_Grades'));
+        return view('pages.Sections.Sections', compact('teachers', 'Grades', 'list_Grades'));
     }
 
     public function store(SectionsRequest $request){

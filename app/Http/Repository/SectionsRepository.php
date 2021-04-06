@@ -31,6 +31,7 @@ class SectionsRepository implements SectionsRepositoryInterface
             $Sections->Class_id = $request->Class_id;
             $Sections->Status = 1;
             $Sections->save();
+            $Sections->teachers()->attach($request->teacher_id);
             DB::commit();
             toastr()->success(trans('general.success_store_message'));
         } catch(\Exception $ex){
@@ -44,7 +45,7 @@ class SectionsRepository implements SectionsRepositoryInterface
         try {
             DB::beginTransaction();
             // Update Statement
-            
+
             $Sections = Section::findOrFail($request->id);
 
             $Sections->Name_Section = ['ar' => $request->Name_Section_Ar, 'en' => $request->Name_Section_En];

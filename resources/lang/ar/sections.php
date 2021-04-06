@@ -1,4 +1,4 @@
-<?php 
+<?php
 return [
     'sections'                          =>                      'اﻻقسام الدراسية',
     'List_Grade'                        =>                      'List_Grade',
@@ -16,10 +16,11 @@ return [
     'delete_Section'                    =>                      'حذف قسم',
     'Warning_Section'                   =>                      'هل انت متاكد من عملية الحذف',
     'success_delete_message'            =>                      'تم حذف بيانات القسم بنجاح',
-    
+    'select_Teacher_Name'               =>                      'اسم المعلم',
+    'select_teacher_name_alert'         =>                      'قم باختيار معلم واحد او العديد',
+
     'Notes' => 'Notes',
     'submit' => 'حفظ البيانات',
-    'Status'=>'الحالة',
     'Status_Section_AC'=>'نشط',
     'Status_Section_No'=>'غير نشط',
     'delete_Grade_Error'=>'The Grade cannot be deleted because there are classes attached to it',

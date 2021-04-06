@@ -36,9 +36,9 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Settings-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="#">{{ trans('settings.application_setting') }}</a> </li>
+                            <li> <a href="#">{{ trans('settings.translation_control') }}</a> </li>
+                            <li> <a href="#">{{ trans('settings.application_workflow') }}</a> </li>
                         </ul>
                     </li>
                     <!-- menu item Elements-->
@@ -99,8 +99,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Teachers-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="calendar.html">Events Calendar </a> </li>
-                            <li> <a href="calendar-list.html">List Calendar</a> </li>
+                            <li> <a href="{{ route('Teachers.index') }}">{{trans('teachers.Teachers_List')}}</a> </li>
                         </ul>
                     </li>
                     <!-- Parents-->
@@ -112,8 +111,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Parents-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{ url('Add/Parent') }}">{{ trans('parents.add_parents') }}</a> </li>
-                            <li> <a href="#">{{ trans('parents.show_all_parents_list') }}</a> </li>
+                            <li> <a href="{{ url('Parents') }}">{{ trans('parents.show_all_parents_list') }}</a> </li>
                         </ul>
                     </li>
                     <!-- Accounts-->

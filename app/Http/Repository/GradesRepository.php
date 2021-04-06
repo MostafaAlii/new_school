@@ -65,11 +65,11 @@ class GradesRepository implements GradesRepositoryInterface{
             }catch (\Exception $ex){
                 DB::rollback();
                 toastr()->error(trans('general.error_store_message'));
-            }    
+            }
         }else {
             toastr()->error(trans('general.error_you_have_child_classes'));
             return redirect()->back();
         }
-        
+
     }
 }

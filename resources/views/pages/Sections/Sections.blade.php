@@ -349,7 +349,18 @@
                                                 {{ trans('sections.Name_Class') }}
                                             </label>
                                             <select name="Class_id" class="custom-select">
-                                                
+
+                                            </select>
+                                        </div>
+                                        <br>
+
+                                        <div class="col">
+                                            <label for="inputName" class="control-label">{{ trans('sections.select_Teacher_Name') }}</label>
+                                            <span class="pull-left">( <span class="text-danger ">{{ trans('sections.select_teacher_name_alert') }}</span> )</span>
+                                            <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                                @foreach($teachers as $teacher)
+                                                    <option value="{{$teacher->id}}">{{$teacher->Name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
 

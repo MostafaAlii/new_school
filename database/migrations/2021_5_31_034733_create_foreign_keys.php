@@ -32,7 +32,7 @@ class CreateForeignKeys extends Migration {
         });
 
 		Schema::table('parent_attachments', function(Blueprint $table) {
-            $table->foreign('parent_id')->references('id')->on('my__parents');
+            $table->foreign('parent_id')->references('id')->on('my__parents')->onDelete('cascade');
         });
 	}
 
@@ -45,7 +45,7 @@ class CreateForeignKeys extends Migration {
 		Schema::table('sections', function(Blueprint $table) {
             $table->dropForeign('sections_Grade_id_foreign');
         });
-    
+
         Schema::table('sections', function(Blueprint $table) {
             $table->dropForeign('sections_Class_id_foreign');
         });

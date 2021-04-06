@@ -4,6 +4,8 @@
 <script src="{{ URL::asset('assets/js/plugins-jquery.js') }}"></script>
 <!-- Select2 Plugin -->
 <script src="{{ URL::asset('assets/js/select2.min.js') }}"></script>
+<!-- Main Js File -->
+<script src="{{ URL::asset('assets/js/main.js') }}"></script>
 <!-- Switchery Plugin -->
 <script src="{{ URL::asset('assets/js/switchery.min.js') }}"></script>
 <!-- plugin_path -->

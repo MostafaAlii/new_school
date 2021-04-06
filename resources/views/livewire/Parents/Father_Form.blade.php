@@ -128,10 +128,15 @@
                     @enderror
                 </div>
 
-                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" wire:click="firstStepSubmit"
-                        type="button">{{trans('parents.Next')}}
-                </button>
-
+                @if($updateMode)
+                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" wire:click="firstStepSubmit_edit"
+                            type="button">{{trans('parents.Next')}}
+                    </button>
+                @else
+                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" wire:click="firstStepSubmit"
+                            type="button">{{trans('parents.Next')}}
+                    </button>
+                @endif
             </div>
         </div>
     </div>

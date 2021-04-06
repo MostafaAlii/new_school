@@ -9,8 +9,13 @@ class Section extends Model
     protected $fillable=['Name_Section','Grade_id','Class_id'];
     protected $table = 'sections';
     public $timestamps = true;
-    
+
     public function My_classs(){
         return $this->belongsTo('App\Models\Classroom', 'Class_id');
+    }
+
+    public function teachers()
+    {
+        return $this->belongsToMany('App\Models\Teacher','teacher_section');
     }
 }
