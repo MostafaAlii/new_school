@@ -16,6 +16,8 @@ return [
     'delete_Section'                    =>                      'حذف قسم',
     'Warning_Section'                   =>                      'هل انت متاكد من عملية الحذف',
     'success_delete_message'            =>                      'تم حذف بيانات القسم بنجاح',
+    'select_Teacher_Name'               =>                      'اسم المعلم',
+    'select_teacher_name_alert'         =>                      'قم باختيار معلم واحد او العديد',
 
     'Notes' => 'Notes',
     'submit' => 'حفظ البيانات',
